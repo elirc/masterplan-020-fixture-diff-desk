@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-03T22:31:11.259302+00:00",
+  "nodeVersion": "v22.16.0",
+  "nodeChecks": {
+    "command": "node --test",
+    "exitCode": 0,
+    "tests": 4,
+    "output": "TAP version 13\n# Subtest: added, removed, changed and unchanged keys are distinct\nok 1 - added, removed, changed and unchanged keys are distinct\n  ---\n  duration_ms: 9.7841\n  type: 'test'\n  ...\n# Subtest: missing is not null and type changes are changes\nok 2 - missing is not null and type changes are changes\n  ---\n  duration_ms: 1.5291\n  type: 'test'\n  ...\n# Subtest: parse errors identify the source and reject unsupported structures\nok 3 - parse errors identify the source and reject unsupported structures\n  ---\n  duration_ms: 3.847\n  type: 'test'\n  ...\n# Subtest: prototype-looking keys are data and inputs stay unchanged\nok 4 - prototype-looking keys are data and inputs stay unchanged\n  ---\n  duration_ms: 1.7481\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 719.3252\n"
+  },
+  "browserChecks": {
+    "id": 20,
+    "status": "passed",
+    "checks": [
+      "No document horizontal overflow at 1200, 800, 500 and 320 CSS pixels",
+      "First Tab reveals skip link; Enter focuses main",
+      "Three diff categories, labeled syntax/shape errors and missing-versus-null recovery verified"
+    ],
+    "browser": "Installed Microsoft Edge via Playwright",
+    "checkedAt": "2026-10-03T22:28:43.001462+00:00",
+    "consoleErrors": []
+  },
+  "scope": "Actual local reference verification. Learner stories are not implemented. Remote CI results are separate."
+}
