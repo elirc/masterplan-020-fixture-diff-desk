@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fixture Diff Desk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+<div class="eyebrow">Fieldwork / MASTERPLAN M020</div>
+<h1>Fixture Diff Desk</h1>
+<p class="lede">A developer wants to compare two small JSON fixtures and explain changed fields.</p>
+</header>
+<main id="main" tabindex="-1">
+<h2>Compare flat JSON records</h2>
+<p>Only scalar values are accepted: strings, finite numbers, booleans and null. Nested objects and arrays are deliberately outside scope.</p>
+<label for="before">Before</label>
+<textarea id="before" rows="4">{"name":"Map","count":2,"old":null}</textarea>
+<label for="after">After</label>
+<textarea id="after" rows="4">{"name":"Map","count":3,"new":null}</textarea>
+<button id="compare">Compare records</button>
+<pre id="result" aria-live="polite">
+</pre>
+</main>
+<footer>Fictional local learning project. <a href="https://github.com/elirc/masterplan-020-fixture-diff-desk">Source and learning workshop</a>
+</footer>
+<script type="module" src="app.js">
+</script>
+</body>
+</html>
