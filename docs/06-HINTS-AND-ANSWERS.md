@@ -6,9 +6,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 01: Show unchanged-key count
 
-**Hint 1 — ownership:** Begin from `diffFlat`. Derive an unchanged count without including unchanged rows in the main changes list.
+**Hint 1 — ownership:** Begin from the `changes` list built by `diffFlat`. Derive an unchanged count without including unchanged rows in the main changes list.
 
-**Hint 2 — reasoning:** Revisit the decision “Keep the supported shape small”. Ask yourself: What would an array-diff contract need to say before implementation?
+**Hint 2 — reasoning:** Revisit the decision “Test presence separately from value”. Ask yourself: Why is key in object a different question from Object.hasOwn?
 
 **Answer direction:** A defensible solution demonstrates this observable result: Counts reconcile to the union of keys for added, removed, changed and unchanged cases. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -16,9 +16,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 02: Add a swap action
 
-**Hint 1 — ownership:** Begin from `diffFlat`. Swap the two source strings and immediately invalidate or recompute the comparison.
+**Hint 1 — ownership:** Begin from the two textareas and their `oninput` handlers. Swap the two source strings and immediately invalidate or recompute the comparison.
 
-**Hint 2 — reasoning:** Revisit the decision “Test presence separately from value”. Ask yourself: Why is key in object a different question from Object.hasOwn?
+**Hint 2 — reasoning:** Revisit the decision “Make output order deterministic”. Ask yourself: Would a sorted result still be appropriate if original source order carried meaning?
 
 **Answer direction:** A defensible solution demonstrates this observable result: Added becomes removed, before/after values reverse, and unchanged keys remain absent. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -26,7 +26,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 03: Offer a sample reset
 
-**Hint 1 — ownership:** Begin from `diffFlat`. Restore the original fictional fixture pair through one action and clear stale feedback.
+**Hint 1 — ownership:** Begin from the Compare handler and textarea handlers in `public/app.js`. Restore the original fictional fixture pair through one action and clear stale feedback.
 
 **Hint 2 — reasoning:** Revisit the decision “Make output order deterministic”. Ask yourself: Would a sorted result still be appropriate if original source order carried meaning?
 
@@ -36,9 +36,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 04: Choose signed-zero policy
 
-**Hint 1 — ownership:** Begin from `diffFlat`. Keep Object.is or normalize signed zero, documenting the decision with -0 and 0 fixtures.
+**Hint 1 — ownership:** Begin from the `Object.is` comparison in `diffFlat`. Keep Object.is or normalize signed zero, documenting the decision with -0 and 0 fixtures.
 
-**Hint 2 — reasoning:** Revisit the decision “Keep the supported shape small”. Ask yourself: What would an array-diff contract need to say before implementation?
+**Hint 2 — reasoning:** Revisit the decision “Test presence separately from value”. Ask yourself: Why is key in object a different question from Object.hasOwn?
 
 **Answer direction:** A defensible solution demonstrates this observable result: The test distinguishes your chosen equality semantics and the guide explains JSON display limitations. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -46,9 +46,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 05: Render a changes table
 
-**Hint 1 — ownership:** Begin from `diffFlat`. Map structured change rows to safe text cells with explicit absent labels.
+**Hint 1 — ownership:** Begin from the result rendering in `public/app.js`. Map structured change rows to safe text cells with explicit absent labels.
 
-**Hint 2 — reasoning:** Revisit the decision “Test presence separately from value”. Ask yourself: Why is key in object a different question from Object.hasOwn?
+**Hint 2 — reasoning:** Revisit the decision “Make output order deterministic”. Ask yourself: Would a sorted result still be appropriate if original source order carried meaning?
 
 **Answer direction:** A defensible solution demonstrates this observable result: Missing is visually distinct from null and markup-looking string values remain text. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -56,9 +56,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 06: Add a nested-data teaching error
 
-**Hint 1 — ownership:** Begin from `diffFlat`. Improve the unsupported-shape error to name the first offending key without attempting recursion.
+**Hint 1 — ownership:** Begin from the value loop in `parseFlat`. Improve the unsupported-shape error to name the first offending key without attempting recursion.
 
-**Hint 2 — reasoning:** Revisit the decision “Make output order deterministic”. Ask yourself: Would a sorted result still be appropriate if original source order carried meaning?
+**Hint 2 — reasoning:** Revisit the decision “Keep the supported shape small”. Ask yourself: What would an array-diff contract need to say before implementation?
 
 **Answer direction:** A defensible solution demonstrates this observable result: The correct side and key are shown, and the app still refuses a partial nested diff. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 

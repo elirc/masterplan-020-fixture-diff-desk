@@ -14,25 +14,25 @@ The smallest useful result answers this user need: A developer wants to compare 
 
 Invalid JSON cannot reach the object validator. Valid JSON such as an array or null still fails the flat-object contract. A nested object has valid syntax but unsupported structure. These distinctions let the error explain what to fix instead of collapsing every failure into an unhelpful parse error.
 
-**Pause and produce evidence:** {} → {x:null}. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Nested object on After side. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 2: Walk the key union
 
 Write a table with columns key, present-before, present-after and equality. Classify added and removed before comparing values. For unchanged keys produce no row. This hand table is an independent expected result for a small regression fixture.
 
-**Pause and produce evidence:** {x:1} → {x:'1'}. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** {} → {x:null}. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 3: Probe awkward names
 
 JSON.parse creates data properties for keys such as __proto__. The core uses own keys and Object.hasOwn to compare them. No merging into a general configuration object occurs. Test one prototype-looking key to expose an inherited-property assumption without expanding into a full recursive serializer.
 
-**Pause and produce evidence:** Nested object on After side. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Before {"__proto__":1} and After {}. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 4: Invalidate old output
 
 The textareas can change after a comparison. Their input handlers replace the result with a compare-again message. This is a simple way to prevent a correct result for an earlier input from appearing current. A future live-diff mode would require a separate rendering policy.
 
-**Pause and produce evidence:** Nested object on After side. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Edit either textarea after a comparison. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Keep the implementation reviewable
 

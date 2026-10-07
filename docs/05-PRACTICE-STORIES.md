@@ -6,8 +6,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 01: Show unchanged-key count
 
-**User need:** As a learner or user of Fixture Diff Desk, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Derive an unchanged count without including unchanged rows in the main changes list.
 
 **Implementation plan:**
@@ -26,8 +24,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 02: Add a swap action
-
-**User need:** As a learner or user of Fixture Diff Desk, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Swap the two source strings and immediately invalidate or recompute the comparison.
 
@@ -48,8 +44,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 03: Offer a sample reset
 
-**User need:** As a learner or user of Fixture Diff Desk, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Restore the original fictional fixture pair through one action and clear stale feedback.
 
 **Implementation plan:**
@@ -68,8 +62,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 04: Choose signed-zero policy
-
-**User need:** As a learner or user of Fixture Diff Desk, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Keep Object.is or normalize signed zero, documenting the decision with -0 and 0 fixtures.
 
@@ -90,8 +82,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 05: Render a changes table
 
-**User need:** As a learner or user of Fixture Diff Desk, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Map structured change rows to safe text cells with explicit absent labels.
 
 **Implementation plan:**
@@ -110,8 +100,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 06: Add a nested-data teaching error
-
-**User need:** As a learner or user of Fixture Diff Desk, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Improve the unsupported-shape error to name the first offending key without attempting recursion.
 

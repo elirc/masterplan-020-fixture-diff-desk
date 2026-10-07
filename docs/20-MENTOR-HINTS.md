@@ -104,9 +104,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Summarize added, removed and changed rows.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Derive counts from diff output; keep no-change explicit; render counts beside the detailed list.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Derive counts from diff output; keep no-change explicit; render counts beside the detailed list. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Summary counts equal the actual classified rows.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Summary counts equal the actual classified rows. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose compact labels. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -114,9 +114,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Filter the displayed diff without recomputing meaning.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Preserve the complete change list; derive visible rows by key; label filtered and total counts separately.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Preserve the complete change list; derive visible rows by key; label filtered and total counts separately. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Hidden changes still contribute to the total comparison count.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Hidden changes still contribute to the total comparison count. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose case sensitivity. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -124,9 +124,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Explain why visually similar values differ.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Derive a type label that treats null explicitly; show before and after types; keep raw values readable.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Derive a type label that treats null explicitly; show before and after types; keep raw values readable. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Number 1 and string 1 have different labels.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Number 1 and string 1 have different labels. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose a null type label. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -134,9 +134,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Help a reviewer carry the evidence.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Format the source labels and structured changes as text; keep absent markers explicit; avoid HTML interpolation.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Format the source labels and structured changes as text; keep absent markers explicit; avoid HTML interpolation. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: A removed null is distinguishable from an absent before value.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: A removed null is distinguishable from an absent before value. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose report ordering and indentation. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -144,9 +144,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Explain a parsing limitation honestly.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Inspect a duplicate-key JSON example; observe the parsed result; document that ordinary JSON.parse does not preserve duplicate entries.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Inspect a duplicate-key JSON example; observe the parsed result; document that ordinary JSON.parse does not preserve duplicate entries. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The guide never claims the current parser reports every original duplicate key.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The guide never claims the current parser reports every original duplicate key. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Decide whether a stricter parser belongs in a future project. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -154,9 +154,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Teach identity versus equality without changing correctness.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Compare two separately parsed equal objects; show an empty diff; discuss why object-reference equality alone is insufficient.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Compare two separately parsed equal objects; show an empty diff; discuss why object-reference equality alone is insufficient. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Equal contents produce no changes even when object references differ.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Equal contents produce no changes even when object references differ. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose a small equal fixture pair. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -164,9 +164,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Restore only Before or After and invalidate the report.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Keep separate baseline strings; wire one control per side; clear stale comparison feedback.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Keep separate baseline strings; wire one control per side; clear stale comparison feedback. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Resetting one side leaves the other source untouched.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Resetting one side leaves the other source untouched. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose default fixtures. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -174,9 +174,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Expose a deliberate JSON-number limitation.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Compare large integer literals around safe precision; observe parsing; decide whether to restrict the shape further on a branch.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Compare large integer literals around safe precision; observe parsing; decide whether to restrict the shape further on a branch. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The reference's finite-number acceptance is distinguished from exact integer preservation.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The reference's finite-number acceptance is distinguished from exact integer preservation. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose a stricter numeric policy if needed. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -184,9 +184,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Improve scanning without color-only meaning.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Render explicit before and after labels; use safe text; inspect long string wrapping.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Render explicit before and after labels; use safe text; inspect long string wrapping. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The full value remains available at 320px and change kind is textual.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The full value remains available at 320px and change kind is textual. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose table or stacked-row layout. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
